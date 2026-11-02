@@ -1,0 +1,41 @@
+{
+    "name": "frontol-management-system",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Система централизованного управления базами данных Frontol 6",
+    "workspaces": [
+        "packages/common",
+        "packages/agent",
+        "packages/server",
+        "packages/web"
+    ],
+    "scripts": {
+        "build": "npm run build --workspaces --if-present",
+        "build:common": "npm run build --workspace=@frontol/common",
+        "build:agent": "npm run build --workspace=@frontol/agent",
+        "build:server": "npm run build --workspace=@frontol/server",
+        "dev:agent": "npm run dev --workspace=@frontol/agent",
+        "dev:server": "npm run dev --workspace=@frontol/server",
+        "start:agent": "npm start --workspace=@frontol/agent",
+        "start:server": "npm start --workspace=@frontol/server",
+        "test": "npm test --workspaces --if-present",
+        "lint": "eslint \"packages/**/*.ts\"",
+        "format": "prettier --write \"packages/**/*.ts\"",
+        "clean": "rimraf packages/*/dist packages/*/node_modules node_modules",
+        "dev:web": "npm run dev --workspace=@frontol/web",
+        "build:web": "npm run build --workspace=@frontol/web"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "@typescript-eslint/eslint-plugin": "^6.13.0",
+        "@typescript-eslint/parser": "^6.13.0",
+        "eslint": "^8.55.0",
+        "prettier": "^3.1.0",
+        "rimraf": "^5.0.5",
+        "typescript": "^5.3.0"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "paths": {
+      "@frontol/common": ["../common/src"]
+    },
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "references": [{ "path": "../common" }]
+}

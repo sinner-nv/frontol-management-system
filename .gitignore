@@ -1,0 +1,41 @@
+# Зависимости
+node_modules/
+packages/*/node_modules/
+
+# Сборка
+dist/
+packages/*/dist/
+*.tsbuildinfo
+
+# Переменные окружения
+.env
+.env.local
+*.env
+
+# Логи
+logs/
+*.log
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# БД (локальные)
+*.sqlite
+*.sqlite3
+*.db
+
+# Прочее
+coverage/
+.cache/
+
+
+# Состояние агента (не коммитим — содержит authToken)
+.agent.json
+packages/agent/.agent.json
